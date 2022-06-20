@@ -1,0 +1,88 @@
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\appsettings.json
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.exe
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.deps.json
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.runtimeconfig.json
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.runtimeconfig.dev.json
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.dll
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.pdb
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.csprojAssemblyReference.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.AssemblyInfoInputs.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.AssemblyInfo.cs
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.csproj.CoreCompileInputs.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\staticwebassets\3 - MinhasTarefasAPI.StaticWebAssets.Manifest.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\staticwebassets\3 - MinhasTarefasAPI.StaticWebAssets.xml
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\3 - MinhasTarefasAPI.styles.css
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.dll
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.pdb
+D:\arquivos\programation\workspace-c#\month 6\MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.genruntimeconfig.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.csprojAssemblyReference.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.AssemblyInfoInputs.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.AssemblyInfo.cs
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.csproj.CoreCompileInputs.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\appsettings.json
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.exe
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.deps.json
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.runtimeconfig.json
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.runtimeconfig.dev.json
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Humanizer.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\staticwebassets\3 - MinhasTarefasAPI.StaticWebAssets.Manifest.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\staticwebassets\3 - MinhasTarefasAPI.StaticWebAssets.xml
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\3 - MinhasTarefasAPI.styles.css
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.csproj.CopyComplete
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.genruntimeconfig.cache
