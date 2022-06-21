@@ -1,9 +1,11 @@
 using _3___MinhasTarefasAPI.Database;
+using _3___MinhasTarefasAPI.Models;
 using _3___MinhasTarefasAPI.Repositories;
 using _3___MinhasTarefasAPI.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -39,7 +41,9 @@ namespace _3___MinhasTarefasAPI
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<ITarefaRepository, TarefaRepository>();
 
-
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                    .AddEntityFrameworkStores<MinhasTarefasContext>()
+                    .AddDefaultTokenProviders();
 
 
         }
@@ -52,6 +56,8 @@ namespace _3___MinhasTarefasAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStatusCodePages();
+            app.UseAuthentication();
             app.UseHttpsRedirection();
 
             app.UseRouting();

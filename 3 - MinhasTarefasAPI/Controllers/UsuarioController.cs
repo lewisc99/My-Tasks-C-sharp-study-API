@@ -30,7 +30,7 @@ namespace _3___MinhasTarefasAPI.Controllers
 
 
 
-
+        [HttpPost("login")]
         public ActionResult Login([FromBody] UsuarioDTO usuarioDTO)
         {
 
@@ -62,6 +62,8 @@ namespace _3___MinhasTarefasAPI.Controllers
             }
         }
 
+
+        [HttpPost("")]
         public ActionResult Cadastrar([FromBody] UsuarioDTO usuarioDTO )
         {
             if (ModelState.IsValid)
@@ -69,6 +71,7 @@ namespace _3___MinhasTarefasAPI.Controllers
 
                 ApplicationUser usuario = new ApplicationUser();
                 usuario.FullName = usuarioDTO.Nome;
+                usuario.UserName = usuarioDTO.Email;
                 usuario.Email = usuarioDTO.Email;
                
                 var result = _userManager.CreateAsync(usuario, usuarioDTO.Senha).Result;

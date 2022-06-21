@@ -22,7 +22,7 @@ namespace _3___MinhasTarefasAPI.Models
         public string Senha { get; set; }
 
         [Required]
-        [Compare("senha")] //to compare if ConfirmacaoSenha is equal to password
+        [Compare("Senha")] //to compare if ConfirmacaoSenha is equal to password
         public string ConfirmacaoSenha { get; set; }
 
     }
