@@ -66,12 +66,9 @@ namespace _3___MinhasTarefasAPI
             app.UseStatusCodePages();
             app.UseDeveloperExceptionPage();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
             app.UseAuthentication();
-
+            app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

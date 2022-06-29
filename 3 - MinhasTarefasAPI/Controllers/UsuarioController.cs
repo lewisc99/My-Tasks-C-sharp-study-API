@@ -1,5 +1,6 @@
 ﻿using _3___MinhasTarefasAPI.Models;
 using _3___MinhasTarefasAPI.Repositories.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -30,36 +31,63 @@ namespace _3___MinhasTarefasAPI.Controllers
 
 
 
+        /*  [HttpPost("login")]
+          public ActionResult Login([FromBody] UsuarioDTO usuarioDTO)
+          {
+
+              ModelState.Remove("Nome");
+              ModelState.Remove("ConfirmacaoSenha");
+
+              if(ModelState.IsValid)
+              {
+                ApplicationUser usuario =  _usuarioRepository.Obter(usuarioDTO.Email, usuarioDTO.Senha);
+
+                  if (usuario != null)
+                  {
+                      //login no identity
+                      //user, then cookie parameters.
+                      _signInManager.SignInAsync(usuario, false);
+
+
+                      //no futuro retorna o Token (JWT)
+                      return Ok();
+                  }
+                  else
+                  {
+                      return NotFound("Usuario Não Localizado");
+                  }
+              }
+              else
+              {
+                  return UnprocessableEntity(ModelState);
+              }
+          } */
+
         [HttpPost("login")]
-        public ActionResult Login([FromBody] UsuarioDTO usuarioDTO)
+        public async Task<ActionResult> login([FromBody] LoginDTO loginDTO)
         {
-
-            ModelState.Remove("Nome");
-            ModelState.Remove("ConfirmacaoSenha");
-
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-              ApplicationUser usuario =  _usuarioRepository.Obter(usuarioDTO.Email, usuarioDTO.Senha);
-              
-                if (usuario != null)
-                {
-                    //login no identity
-                    //user, then cookie parameters.
-                    _signInManager.SignInAsync(usuario, false);
+                ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);
 
-
-                    //no futuro retorna o Token (JWT)
-                    return Ok();
-                }
-                else
+                if (user != null)
                 {
-                    return NotFound("Usuario Não Localizado");
+                    await _signInManager.SignOutAsync();
+
+                    Microsoft.AspNetCore.Identity.SignInResult result =
+                        await _signInManager.PasswordSignInAsync(
+                            user, loginDTO.Senha, false, false);
+
+                    if (result.Succeeded)
+                    {
+                        return Ok("user log in");
+                    }
                 }
+                ModelState.AddModelError(nameof(loginDTO.Email),
+                    "Invalid user or password");
             }
-            else
-            {
-                return UnprocessableEntity(ModelState);
-            }
+
+            return Unauthorized();
         }
 
 
@@ -97,6 +125,14 @@ namespace _3___MinhasTarefasAPI.Controllers
             {
                 return UnprocessableEntity(ModelState);
             }
+        }
+
+        [Authorize]
+        [HttpGet("logout")]
+        public async Task<ActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return Ok("user sign Out");
         }
     }
 }
