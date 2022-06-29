@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _3___MinhasTarefasAPI.Database
 {
-    public class MinhasTarefasContext :IdentityDbContext
+    public class MinhasTarefasContext :IdentityDbContext<ApplicationUser>
     {
 
         public MinhasTarefasContext(DbContextOptions<MinhasTarefasContext> options) :base(options)

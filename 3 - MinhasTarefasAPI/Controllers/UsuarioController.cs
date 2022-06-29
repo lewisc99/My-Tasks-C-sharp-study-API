@@ -64,17 +64,17 @@ namespace _3___MinhasTarefasAPI.Controllers
 
 
         [HttpPost("")]
-        public ActionResult Cadastrar([FromBody] UsuarioDTO usuarioDTO )
+        public async Task<ActionResult> Cadastrar([FromBody] UsuarioDTO usuarioDTO )
         {
             if (ModelState.IsValid)
             {
 
                 ApplicationUser usuario = new ApplicationUser();
-                usuario.FullName = usuarioDTO.Nome;
-                usuario.UserName = usuarioDTO.Email;
+               
+                usuario.UserName = usuarioDTO.Nome;
                 usuario.Email = usuarioDTO.Email;
                
-                var result = _userManager.CreateAsync(usuario, usuarioDTO.Senha).Result;
+                IdentityResult result = await _userManager.CreateAsync(usuario, usuarioDTO.Senha);
 
 
                 if (!result.Succeeded)

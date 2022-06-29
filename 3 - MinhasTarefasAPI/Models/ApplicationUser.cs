@@ -15,11 +15,12 @@ namespace _3___MinhasTarefasAPI.Models
     public class ApplicationUser: IdentityUser
     {
 
-        public string FullName { get; set; }
+       
 
 
         [ForeignKey("UsuarioId")]
 
-        public ICollection<Tarefa> Tarefas { get; set; }
+
+        public virtual ICollection<Tarefa> Tarefas { get; set; }
     }
 }

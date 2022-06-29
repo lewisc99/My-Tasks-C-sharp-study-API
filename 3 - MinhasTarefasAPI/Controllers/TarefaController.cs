@@ -38,6 +38,13 @@ namespace _3___MinhasTarefasAPI.Controllers
 
         }
 
+        [Authorize]
+        [HttpGet]
+        public ActionResult Hello()
+        {
+            return Ok("ola mundo");
+        }
+
 
         //restore will load the tasks served in the database
         [Authorize]

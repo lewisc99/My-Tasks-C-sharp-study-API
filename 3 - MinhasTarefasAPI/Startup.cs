@@ -31,19 +31,29 @@ namespace _3___MinhasTarefasAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
 
 
             services.AddDbContext<MinhasTarefasContext>(
                 c =>
                 c.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<ITarefaRepository, TarefaRepository>();
+
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                     .AddEntityFrameworkStores<MinhasTarefasContext>()
                     .AddDefaultTokenProviders();
+
+
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
+
+
+            services.AddMvc();
+
+
+            
+
+
 
 
         }
@@ -51,18 +61,16 @@ namespace _3___MinhasTarefasAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+           
 
             app.UseStatusCodePages();
-            app.UseAuthentication();
-            app.UseHttpsRedirection();
+            app.UseDeveloperExceptionPage();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
