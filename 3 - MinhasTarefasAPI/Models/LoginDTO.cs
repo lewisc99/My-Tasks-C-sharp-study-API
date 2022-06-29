@@ -10,7 +10,7 @@ namespace _3___MinhasTarefasAPI.Models
     {
 
 
-        [Required]
+     
         [UIHint("email")]
         public string Nome { get; set; }
 
@@ -21,8 +21,13 @@ namespace _3___MinhasTarefasAPI.Models
 
 
         [Required]
-        [UIHint("password")]
+        [UIHint("Senha")]
         public string Senha { get; set; }
+
+        [Required]
+        [Compare("Senha")]
+        public string ConfirmacaoSenha { get; set; }
+
 
     }
 }

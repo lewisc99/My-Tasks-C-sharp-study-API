@@ -66,6 +66,11 @@ namespace _3___MinhasTarefasAPI.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> login([FromBody] LoginDTO loginDTO)
         {
+
+            ModelState.Remove("Nome");
+            ModelState.Remove("ConfirmacaoSenha");
+
+
             if (ModelState.IsValid)
             {
                 ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);

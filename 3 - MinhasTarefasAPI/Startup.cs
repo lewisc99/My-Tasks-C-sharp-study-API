@@ -48,12 +48,24 @@ namespace _3___MinhasTarefasAPI
             services.AddScoped<ITarefaRepository, TarefaRepository>();
 
 
-            services.AddMvc();
+
+            // like json igonre of java, to not repeat code and refactor code.
+            services.AddMvc().AddNewtonsoftJson(
+                opt => opt.SerializerSettings.ReferenceLoopHandling =
+              Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
 
-            
 
 
+            //to change the response when the user it's not authorized.
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
 
 
         }
@@ -61,7 +73,7 @@ namespace _3___MinhasTarefasAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-           
+
 
             app.UseStatusCodePages();
             app.UseDeveloperExceptionPage();

@@ -21,6 +21,9 @@ namespace _3___MinhasTarefasAPI.Models
         [Required]
         public string Senha { get; set; }
 
+
+
+
         //[Required]
         //[Compare("Senha")] //to compare if ConfirmacaoSenha is equal to password
         //public string ConfirmacaoSenha { get; set; }
