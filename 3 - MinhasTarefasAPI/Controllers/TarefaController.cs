@@ -41,11 +41,18 @@ namespace _3___MinhasTarefasAPI.Controllers
         }
 
      
-        [HttpGet]
-      
-        public ActionResult Hello()
+        [HttpGet("olamundo")]
+        [AllowAnonymous]
+        public ActionResult OlaMundo()
         {
             return Ok("ola mundo");
+        }
+
+
+        [HttpGet("helloworld")]
+        public ActionResult HelloWorld()
+        {
+            return Ok("hello world");
         }
 
 

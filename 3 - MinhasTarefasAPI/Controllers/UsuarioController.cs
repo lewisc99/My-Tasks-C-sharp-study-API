@@ -3,9 +3,12 @@ using _3___MinhasTarefasAPI.Repositories.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -78,14 +81,14 @@ namespace _3___MinhasTarefasAPI.Controllers
                 if (user != null)
                 {
                     await _signInManager.SignOutAsync();
-
+                   
                     Microsoft.AspNetCore.Identity.SignInResult result =
                         await _signInManager.PasswordSignInAsync(
                             user, loginDTO.Senha, false, false);
 
                     if (result.Succeeded)
                     {
-                        return Ok("user log in");
+                        return Ok(BuildToken(user));
                     }
                 }
                 ModelState.AddModelError(nameof(loginDTO.Email),
@@ -139,5 +142,38 @@ namespace _3___MinhasTarefasAPI.Controllers
             await _signInManager.SignOutAsync();
             return Ok("user sign Out");
         }
+
+        public object BuildToken(ApplicationUser usuario)
+        {
+
+            var claims = new[]
+            {
+              // new Claim(JwtRegisteredClaimNames.Aud, "wwww.meuapp.com.br") to use when a website need a permission
+              new Claim(JwtRegisteredClaimNames.Email, usuario.Email)
+
+           };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes( "chave-api-jwt-minhas-tarefas")); // recommend  add the text in -> appsetttings.json
+            var sign = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var exp = DateTime.UtcNow.AddHours(1);
+
+            JwtSecurityToken token = new JwtSecurityToken(
+                issuer:null,
+                audience:null, //means which site is requiring the token, null add to any
+                claims: claims,
+                expires:exp,
+                signingCredentials: sign);
+
+
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token); // passing the token datas and will generate a string encrypted 
+
+
+            return new { token = tokenString, expiration = exp };
+
+        }
+
     }
+
+
+   
 }
