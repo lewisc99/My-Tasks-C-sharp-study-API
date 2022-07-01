@@ -149,7 +149,8 @@ namespace _3___MinhasTarefasAPI.Controllers
             var claims = new[]
             {
               // new Claim(JwtRegisteredClaimNames.Aud, "wwww.meuapp.com.br") to use when a website need a permission
-              new Claim(JwtRegisteredClaimNames.Email, usuario.Email)
+              new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
+              new Claim(JwtRegisteredClaimNames.Sub, usuario.Id) //this property helps identify the user.
 
            };
 

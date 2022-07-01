@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fmMsgux/ivF0Hpl4taiX6F09sFpr5C2tHttFNmejWQES2I2PBwhKnlgOuTJIq90RfwH8c3zrLqzY1zZbsoQ3+w==",
+  "dgSpecHash": "5S5ZZCI/LvQ0jE0SafSiNEAI5Rda9pV5Lgc3eWb09hjebl+QgD1fSJ3/Kohb9DJ9PkJ+mT80hTMjjOk40hocZw==",
   "success": true,
   "projectFilePath": "D:\\arquivos\\programation\\workspace-c#\\month 6\\3 - MinhasTarefasAPI\\3 - MinhasTarefasAPI\\3 - MinhasTarefasAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pichau\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.26\\microsoft.aspnetcore.authentication.jwtbearer.3.1.26.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.0.nupkg.sha512",
