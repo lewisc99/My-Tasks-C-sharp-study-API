@@ -80,16 +80,16 @@ namespace _3___MinhasTarefasAPI.Controllers
 
                 if (user != null)
                 {
-                    await _signInManager.SignOutAsync();
+                    //await _signInManager.SignOutAsync();
                    
-                    Microsoft.AspNetCore.Identity.SignInResult result =
-                        await _signInManager.PasswordSignInAsync(
-                            user, loginDTO.Senha, false, false);
+                    //Microsoft.AspNetCore.Identity.SignInResult result =
+                    //    await _signInManager.PasswordSignInAsync(
+                    //        user, loginDTO.Senha, false, false);
 
-                    if (result.Succeeded)
-                    {
+                    //if (result.Succeeded)
+                    //{
                         return Ok(BuildToken(user));
-                    }
+                   // }
                 }
                 ModelState.AddModelError(nameof(loginDTO.Email),
                     "Invalid user or password");
