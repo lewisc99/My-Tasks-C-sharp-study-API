@@ -24,11 +24,14 @@ namespace _3___MinhasTarefasAPI.Controllers
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        public UsuarioController(IUsuarioRepository usuarioRepository, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        private readonly ITokenRepository _tokenRepository;
+        public UsuarioController(IUsuarioRepository usuarioRepository, SignInManager<ApplicationUser> signInManager,
+            UserManager<ApplicationUser> userManager, ITokenRepository tokenRepository)
         {
             _usuarioRepository = usuarioRepository;
             _signInManager = signInManager;
             _userManager = userManager;
+            _tokenRepository = tokenRepository;
         }
 
 
@@ -81,14 +84,38 @@ namespace _3___MinhasTarefasAPI.Controllers
                 if (user != null)
                 {
                     //await _signInManager.SignOutAsync();
-                   
+
                     //Microsoft.AspNetCore.Identity.SignInResult result =
                     //    await _signInManager.PasswordSignInAsync(
                     //        user, loginDTO.Senha, false, false);
 
-                    //if (result.Succeeded)
-                    //{
-                        return Ok(BuildToken(user));
+                    //retorna o token
+
+                    var token = BuildToken(user);
+
+
+                    //Salvar o token No Banco
+                    var tokenModel = new Token()
+                    {
+                        RefreshToken = token.RefreshToken,
+                        ExpirationRefreshToken = token.ExpirationRefreshToken,
+                        ExpirationToken = token.Expiration,
+                        Usuario = user,
+                        Criado = DateTime.Now,
+                        Utilizado = false
+                    };
+
+
+                    _tokenRepository.Cadastrar(tokenModel);
+
+
+
+                    return Ok(BuildToken(user));
+
+                  
+                        
+
+
                    // }
                 }
                 ModelState.AddModelError(nameof(loginDTO.Email),
@@ -143,7 +170,7 @@ namespace _3___MinhasTarefasAPI.Controllers
             return Ok("user sign Out");
         }
 
-        public object BuildToken(ApplicationUser usuario)
+        public TokenDTO BuildToken(ApplicationUser usuario)
         {
 
             var claims = new[]
@@ -169,8 +196,17 @@ namespace _3___MinhasTarefasAPI.Controllers
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token); // passing the token datas and will generate a string encrypted 
 
 
-            return new { token = tokenString, expiration = exp };
 
+          var refreshToken =   Guid.NewGuid().ToString();
+
+            var expRefreshToken = DateTime.UtcNow.AddHours(2);
+
+
+
+           var tokenDTO =  new  TokenDTO{ Token = tokenString, Expiration = exp, ExpirationRefreshToken = expRefreshToken, RefreshToken = refreshToken};
+
+
+            return tokenDTO;
         }
 
     }

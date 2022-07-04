@@ -50,6 +50,7 @@ namespace _3___MinhasTarefasAPI
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<ITarefaRepository, TarefaRepository>();
+            services.AddScoped<ITokenRepository, TokenRepository>();
 
 
 

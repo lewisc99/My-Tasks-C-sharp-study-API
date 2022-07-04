@@ -18,6 +18,7 @@ namespace _3___MinhasTarefasAPI.Database
 
 
         public DbSet<Tarefa> Tarefas { get; set; }
+        public DbSet<Token> Token { get; set; }
 
     }
 }
