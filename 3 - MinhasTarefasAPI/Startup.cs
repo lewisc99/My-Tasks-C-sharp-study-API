@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,7 +56,18 @@ namespace _3___MinhasTarefasAPI
 
 
             // like json igonre of java, to not repeat code and refactor code.
-            services.AddMvc().AddNewtonsoftJson(
+            services.AddMvc(
+                
+                config =>
+                {
+                    config.ReturnHttpNotAcceptable = true; //return 406
+                    config.InputFormatters.Add(new XmlSerializerInputFormatter(config)); // to activate the user to choose which format want
+                    config.OutputFormatters.Add(new XmlSerializerOutputFormatter()); //to activate the response - result another format beyond JSON
+
+                }
+                
+                
+                ).AddNewtonsoftJson(
                 opt => opt.SerializerSettings.ReferenceLoopHandling =
               Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
