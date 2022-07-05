@@ -21,7 +21,7 @@ namespace _3___MinhasTarefasAPI.Repositories
 
         public Token obter(string refreshToken)
         {
-           return  _banco.Token.FirstOrDefault(a => a.RefreshToken == refreshToken);
+           return  _banco.Token.FirstOrDefault(a => a.RefreshToken == refreshToken && a.Utilizado == false);
 
         }
 

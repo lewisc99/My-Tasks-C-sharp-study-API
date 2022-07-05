@@ -61,5 +61,14 @@ namespace _3___MinhasTarefasAPI.Repositories
             }
 
         }
+
+        public ApplicationUser Obter(string id)
+        {
+
+          
+
+            return _userManager.FindByIdAsync(id).Result;
+
+        }
     }
 }

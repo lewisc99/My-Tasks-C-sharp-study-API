@@ -125,6 +125,53 @@ namespace _3___MinhasTarefasAPI.Controllers
             return Unauthorized();
         }
 
+        [HttpPost("renovar")]
+        public ActionResult Renovar([FromBody] TokenDTO tokenDTO)
+        {
+          var refreshTokenDB =  _tokenRepository.obter(tokenDTO.RefreshToken);
+
+            if (refreshTokenDB == null) //if token isn't valid, already expired or something
+
+            {
+                return NotFound();
+            }
+
+
+            //if token is found it / will generate a new token with refresh Token.
+            // and need to take the old refreshToken and update with the new one created.
+            refreshTokenDB.Atualizado = DateTime.Now;
+            refreshTokenDB.Utilizado = true;
+            _tokenRepository.Atualizar(refreshTokenDB);
+
+
+
+            //generate a new token / refresh token - Save
+             var user =   _usuarioRepository.Obter(refreshTokenDB.UsuarioId);
+
+
+
+            //save token in the database
+
+            var token = BuildToken(user);
+
+
+            //Salvar o token No Banco
+            var tokenModel = new Token()
+            {
+                RefreshToken = token.RefreshToken,
+                ExpirationRefreshToken = token.ExpirationRefreshToken,
+                ExpirationToken = token.Expiration,
+                Usuario = user,
+                Criado = DateTime.Now,
+                Utilizado = false
+            };
+
+            _tokenRepository.Cadastrar(tokenModel);
+            return Ok(token);
+
+        }
+
+
 
         [HttpPost("")]
         public async Task<ActionResult> Cadastrar([FromBody] UsuarioDTO usuarioDTO )
