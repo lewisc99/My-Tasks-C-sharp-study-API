@@ -579,7 +579,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.OpenApi/1.3.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
@@ -3240,20 +3240,17 @@
         "runtime.json"
       ]
     },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+    "Microsoft.OpenApi/1.3.2": {
+      "sha512": "5YR1u+Mc3LgkL4yfK2RUURLv1LFLYwyDsdbfATJCH1fxFk7VAQexvsmwnavM7kk1nbwV9OmjZZGDWVREukGuJQ==",
       "type": "package",
-      "path": "microsoft.openapi/1.2.3",
+      "path": "microsoft.openapi/1.3.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
+        "microsoft.openapi.1.3.2.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -7851,6 +7848,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
+      "Microsoft.OpenApi >= 1.3.2",
       "Swashbuckle.AspNetCore >= 6.3.1",
       "Swashbuckle.Core >= 5.6.0"
     ]
@@ -7939,6 +7937,10 @@
           "Microsoft.Extensions.PlatformAbstractions": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[1.3.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

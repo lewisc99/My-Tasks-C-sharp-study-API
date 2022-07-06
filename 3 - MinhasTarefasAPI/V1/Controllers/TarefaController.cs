@@ -16,6 +16,10 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
     [ApiController]
 
     [Authorize]
+    [ApiVersion("1.0")]
+
+
+   
     public class TarefaController:ControllerBase
     {
 
@@ -31,8 +35,10 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
 
         //sync add more tasks to the database
 
-     
+        [MapToApiVersion("1.0")]
+
         [HttpPost("sincronizar")] //httpPOst because can overpass the limit to httpGet
+
         public ActionResult Sincronizar([FromBody] List<Tarefa> tarefas )
         {
 
@@ -40,26 +46,15 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
 
         }
 
-     
-        [HttpGet("olamundo")]
-        [AllowAnonymous]
-        public ActionResult OlaMundo()
-        {
-            return Ok("ola mundo");
-        }
-
-
-        [HttpGet("helloworld")]
-        public ActionResult HelloWorld()
-        {
-            return Ok("hello world");
-        }
+   
 
 
         //restore will load the tasks served in the database
       
         [HttpGet("restaurar")]
-        
+        [MapToApiVersion("1.0")]
+
+
         public ActionResult Restaurar(DateTime data)
         {
 

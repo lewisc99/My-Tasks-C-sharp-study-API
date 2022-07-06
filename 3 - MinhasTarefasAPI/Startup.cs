@@ -63,7 +63,7 @@ namespace _3___MinhasTarefasAPI
 
             // like json igonre of java, to not repeat code and refactor code.
             services.AddMvc(
-                
+
                 config =>
                 {
                     config.ReturnHttpNotAcceptable = true; //return 406
@@ -71,8 +71,8 @@ namespace _3___MinhasTarefasAPI
                     config.OutputFormatters.Add(new XmlSerializerOutputFormatter()); //to activate the response - result another format beyond JSON
 
                 }
-                
-                
+
+
                 ).AddNewtonsoftJson(
                 opt => opt.SerializerSettings.ReferenceLoopHandling =
               Newtonsoft.Json.ReferenceLoopHandling.Ignore);
@@ -96,39 +96,19 @@ namespace _3___MinhasTarefasAPI
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("chave-api-jwt-minhas-tarefas"))
-        });
-
-
-            services.AddAuthorization(auth =>
-            {
-                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
-                                         .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
-                                         .RequireAuthenticatedUser().Build());
-            });
-
-            //to change the response when the user it's not authorized.
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.Events.OnRedirectToLogin = context =>
-                {
-                    context.Response.StatusCode = 401;
-                    return Task.CompletedTask;
-                };
-            });
-
-
+                });
 
             services.AddApiVersioning(
-                cfg =>
-                {
-                    cfg.ReportApiVersions = true;
+             cfg =>
+             {
+                 cfg.ReportApiVersions = true;
 
-                    cfg.ApiVersionReader = new HeaderApiVersionReader("api-version");
+                 cfg.ApiVersionReader = new HeaderApiVersionReader("api-version");
 
-                    cfg.AssumeDefaultVersionWhenUnspecified = true;
+                 cfg.AssumeDefaultVersionWhenUnspecified = true;
 
-                    cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
-                });
+                 cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+             });
 
 
             services.AddVersionedApiExplorer(options =>
@@ -139,19 +119,33 @@ namespace _3___MinhasTarefasAPI
 
 
 
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v2.0", new OpenApiInfo
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Version = "v2.0",
-                    Title = "Minhas Tarefas - API V2"
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Scheme = "bearer",
+                    Description = "Please insert JWT token into field"
                 });
 
-                c.SwaggerDoc("v1.1", new OpenApiInfo
-                {
-                    Version = "v1.1",
-                    Title = "Minhas Tarefas - API v1.1"
-                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            new string[] { }
+                        }
+                    });
+
 
                 c.SwaggerDoc("v1.0", new OpenApiInfo
                 {
@@ -184,6 +178,30 @@ namespace _3___MinhasTarefasAPI
             });
 
 
+
+
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                                         .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                                         .RequireAuthenticatedUser().Build());
+            });
+
+            //to change the response when the user it's not authorized.
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
+
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -208,8 +226,7 @@ namespace _3___MinhasTarefasAPI
             app.UseSwaggerUI(cfg =>
             {
                 cfg.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Minhas Tarefas v1.0");
-                cfg.SwaggerEndpoint("/swagger/v1.1/swagger.json", "Minhas Tarefas v1.1");
-                cfg.SwaggerEndpoint("/swagger/v2.0/swagger.json", "Minhas Tarefas v2.0");
+
 
 
                 cfg.RoutePrefix = string.Empty;

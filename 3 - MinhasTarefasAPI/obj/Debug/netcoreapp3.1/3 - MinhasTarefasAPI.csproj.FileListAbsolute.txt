@@ -100,3 +100,5 @@ D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTar
 D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
 D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\obj\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+D:\arquivos\programation\workspace-c#\month 6\3 - MinhasTarefasAPI\3 - MinhasTarefasAPI\bin\Debug\netcoreapp3.1\3 - MinhasTarefasAPI.xml

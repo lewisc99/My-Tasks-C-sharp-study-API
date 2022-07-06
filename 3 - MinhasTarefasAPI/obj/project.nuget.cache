@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DNp5SVkfKJIokOgEdAQZq3IGoLBzQ5RPieuKklcHSOvm+CsCBKn5W8sa9DYOzRCejhY9b9jUb6Pjz+fHW407EA==",
+  "dgSpecHash": "4ON1fTUBC76ItJLQygDJqQ6DCwYWtNyfMuhPR/ewv/dal6mu3nq+MJiL4sRSvtauSwJlk5hRN3YNEwpstmOWfw==",
   "success": true,
   "projectFilePath": "D:\\arquivos\\programation\\workspace-c#\\month 6\\3 - MinhasTarefasAPI\\3 - MinhasTarefasAPI\\3 - MinhasTarefasAPI.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,7 @@
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.net.http\\2.0.20710\\microsoft.net.http.2.0.20710.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
-    "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.openapi\\1.3.2\\microsoft.openapi.1.3.2.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

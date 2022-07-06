@@ -18,6 +18,8 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
+   
     public class UsuarioController: ControllerBase
     {
 
@@ -70,6 +72,8 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
           } */
 
         [HttpPost("login")]
+        [MapToApiVersion("1.0")]
+
         public async Task<ActionResult> login([FromBody] LoginDTO loginDTO)
         {
 
@@ -125,7 +129,10 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
             return Unauthorized();
         }
 
+        [MapToApiVersion("1.0")]
+
         [HttpPost("renovar")]
+
         public ActionResult Renovar([FromBody] TokenDTO tokenDTO)
         {
           var refreshTokenDB =  _tokenRepository.obter(tokenDTO.RefreshToken);
@@ -172,6 +179,7 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
         }
 
 
+        [MapToApiVersion("1.0")]
 
         [HttpPost("")]
         public async Task<ActionResult> Cadastrar([FromBody] UsuarioDTO usuarioDTO )
@@ -209,6 +217,9 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
             }
         }
 
+
+        [MapToApiVersion("1.0")]
+
         [Authorize]
         [HttpGet("logout")]
         public async Task<ActionResult> Logout()
@@ -217,7 +228,7 @@ namespace _3___MinhasTarefasAPI.V1.Controllers
             return Ok("user sign Out");
         }
 
-        public TokenDTO BuildToken(ApplicationUser usuario)
+        private TokenDTO BuildToken(ApplicationUser usuario)
         {
 
             var claims = new[]
