@@ -1,7 +1,7 @@
 using _3___MinhasTarefasAPI.Database;
-using _3___MinhasTarefasAPI.Models;
-using _3___MinhasTarefasAPI.Repositories;
-using _3___MinhasTarefasAPI.Repositories.Contracts;
+using _3___MinhasTarefasAPI.V1.Models;
+using _3___MinhasTarefasAPI.V1.Repositories;
+using _3___MinhasTarefasAPI.V1.Repositories.Contracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -10,15 +10,21 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -111,6 +117,73 @@ namespace _3___MinhasTarefasAPI
             });
 
 
+
+            services.AddApiVersioning(
+                cfg =>
+                {
+                    cfg.ReportApiVersions = true;
+
+                    cfg.ApiVersionReader = new HeaderApiVersionReader("api-version");
+
+                    cfg.AssumeDefaultVersionWhenUnspecified = true;
+
+                    cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+                });
+
+
+            services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
+
+
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v2.0", new OpenApiInfo
+                {
+                    Version = "v2.0",
+                    Title = "Minhas Tarefas - API V2"
+                });
+
+                c.SwaggerDoc("v1.1", new OpenApiInfo
+                {
+                    Version = "v1.1",
+                    Title = "Minhas Tarefas - API v1.1"
+                });
+
+                c.SwaggerDoc("v1.0", new OpenApiInfo
+                {
+                    Version = "v1.0",
+                    Title = "Minhas Tarefas - API v1.0"
+                });
+
+
+                var caminhoProjeto = PlatformServices.Default.Application.ApplicationBasePath;
+                var NomeProjeto = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var caminhoArquivoXMLComentario = Path.Combine(caminhoProjeto, NomeProjeto);
+
+
+                c.IncludeXmlComments(caminhoArquivoXMLComentario);
+
+
+                c.DocInclusionPredicate((version, desc) =>
+                {
+                    if (!desc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
+                    var versions = methodInfo.DeclaringType.GetCustomAttributes(true).OfType<ApiVersionAttribute>().SelectMany(attr => attr.Versions);
+                    var maps = methodInfo.GetCustomAttributes(true).OfType<MapToApiVersionAttribute>().SelectMany(attr => attr.Versions).ToArray();
+                    version = version.Replace("v", "");
+                    return versions.Any(v => v.ToString() == version && maps.Any(v => v.ToString() == version));
+                });
+
+
+
+
+                c.ResolveConflictingActions(apiDescription => apiDescription.First());
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -127,6 +200,20 @@ namespace _3___MinhasTarefasAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(cfg =>
+            {
+                cfg.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Minhas Tarefas v1.0");
+                cfg.SwaggerEndpoint("/swagger/v1.1/swagger.json", "Minhas Tarefas v1.1");
+                cfg.SwaggerEndpoint("/swagger/v2.0/swagger.json", "Minhas Tarefas v2.0");
+
+
+                cfg.RoutePrefix = string.Empty;
+
             });
         }
     }

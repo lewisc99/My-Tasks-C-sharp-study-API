@@ -1,4 +1,4 @@
-﻿using _3___MinhasTarefasAPI.Models;
+﻿using _3___MinhasTarefasAPI.V1.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;

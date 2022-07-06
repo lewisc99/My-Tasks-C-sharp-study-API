@@ -1,5 +1,5 @@
-﻿using _3___MinhasTarefasAPI.Models;
-using _3___MinhasTarefasAPI.Repositories.Contracts;
+﻿using _3___MinhasTarefasAPI.V1.Models;
+using _3___MinhasTarefasAPI.V1.Repositories.Contracts;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3___MinhasTarefasAPI.Repositories
+namespace _3___MinhasTarefasAPI.V1.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {

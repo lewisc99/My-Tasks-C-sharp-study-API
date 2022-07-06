@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _3___MinhasTarefasAPI.Models
+namespace _3___MinhasTarefasAPI.V1.Models
 {
     public class Tarefa
     {

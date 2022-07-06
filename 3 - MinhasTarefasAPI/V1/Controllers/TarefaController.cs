@@ -1,5 +1,5 @@
-﻿using _3___MinhasTarefasAPI.Models;
-using _3___MinhasTarefasAPI.Repositories.Contracts;
+﻿using _3___MinhasTarefasAPI.V1.Models;
+using _3___MinhasTarefasAPI.V1.Repositories.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _3___MinhasTarefasAPI.Controllers
+namespace _3___MinhasTarefasAPI.V1.Controllers
 {
 
 
